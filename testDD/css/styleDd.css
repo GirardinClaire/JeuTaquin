@@ -1,0 +1,15 @@
+
+#cadrillage {
+    display : grid;
+    grid-template-columns:15vmin 15vmin 15vmin;
+    grid-template-rows: 15vmin 15vmin 15vmin;
+}
+  
+#cadrillage img{
+    height: 14.5vmin;
+    width: 14.5vmin;
+    padding: 0.5vmin;
+    background-color: black;
+}
+
+
