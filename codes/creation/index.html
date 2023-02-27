@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Taquin création</title>
+    <link rel="icon" href="img/logo.png">
+  <link rel="stylesheet" href="css/style_creation.css">
+  </head>
+  <body>
+
+    <!-- I : Définition de la banderolle de titre -->
+    <div id="titre">
+      <h1>Taquin : Création d'imagettes !</h1>
+    </div>
+
+    <!-- II : Définition du bouton d'aide -->
+    <button id="aide">?</button>
+
+    <!-- III : Définition du navigateur contenant : -->
+    <div id="navigateur">
+
+      <!-- 1) des outils de navigation : -->
+      <div id="direction">
+
+          <!-- a) zoom avant / zoom arrière -->
+          <button id="zoomp">+</button>
+          <button id="zoomm">-</button>
+
+          <!-- b) compteur du niveau de zoom -->
+          <p id="num_zoom">2</p>
+
+          <!-- c) flèches directionelles -->
+          <button id="north" class="coord">N</button>
+          <button id="south" class="coord">S</button>
+          <button id="east" class="coord">E</button>
+          <button id="west" class="coord">W</button>
+      </div>
+
+      <!-- 2) la carte sous la forme de 16 imagettes -->
+      <div id="contenu">
+          <div class="cadrillage" id="0_0" style = "grid-row : 1 ; grid-column : 1 "><img id = "i0_0" src=""></div>
+          <div class="cadrillage" id="0_1" style = "grid-row : 1 ; grid-column : 2 "><img id = "i0_1" src=""></div>
+          <div class="cadrillage" id="0_2" style = "grid-row : 1 ; grid-column : 3 "><img id = "i0_2" src=""></div>
+          <div class="cadrillage" id="0_3" style = "grid-row : 1 ; grid-column : 4 "><img id = "i0_3" src=""></div>
+          <div class="cadrillage" id="1_0" style = "grid-row : 2 ; grid-column : 1 "><img id = "i1_0" src=""></div>
+          <div class="cadrillage" id="1_1" style = "grid-row : 2 ; grid-column : 2 "><img id = "i1_1" src=""></div>
+          <div class="cadrillage" id="1_2" style = "grid-row : 2 ; grid-column : 3 "><img id = "i1_2" src=""></div>
+          <div class="cadrillage" id="1_3" style = "grid-row : 2 ; grid-column : 4 "><img id = "i1_3" src=""></div>
+          <div class="cadrillage" id="2_0" style = "grid-row : 3 ; grid-column : 1 "><img id = "i2_0" src=""></div>
+          <div class="cadrillage" id="2_1" style = "grid-row : 3 ; grid-column : 2 "><img id = "i2_1" src=""></div>
+          <div class="cadrillage" id="2_2" style = "grid-row : 3 ; grid-column : 3 "><img id = "i2_2" src=""></div>
+          <div class="cadrillage" id="2_3" style = "grid-row : 3 ; grid-column : 4 "><img id = "i2_3" src=""></div>
+          <div class="cadrillage" id="3_0" style = "grid-row : 4 ; grid-column : 1 "><img id = "i3_0" src=""></div>
+          <div class="cadrillage" id="3_1" style = "grid-row : 4 ; grid-column : 2 "><img id = "i3_1" src=""></div>
+          <div class="cadrillage" id="3_2" style = "grid-row : 4 ; grid-column : 3 "><img id = "i3_2" src=""></div>
+          <div class="cadrillage" id="3_3" style = "grid-row : 4 ; grid-column : 4 "><img id = "i3_3" src=""></div>
+      </div>
+
+      <!-- 3) Des boutons radio pour le choix du fond de carte : -->
+      <div id="type_carte">
+
+        <!-- a) radio du plan IGN V2 -->
+        <label class = "legend_radio"><input class = "choix_plan" id = "PLANIGNV2" type="radio" name="type_carte" value="0" checked >PLANIGNV2</label>
+
+        <!-- b) radio des orthoimages mondiales -->
+        <label class = "legend_radio"><input class = "choix_plan" id = "ORTHOPHOTOS" type="radio" name="type_carte" value="1">ORTHOS</label>
+      </div>
+    </div>
+
+    <!-- IV : Définition du formulaire d'envoie dans la base de données contenant : -->
+    <div id="formulaire">
+
+      <!-- 1) un champs de saisi du nom du jeu de données -->
+      <input id="nom_jeu"type="text" name="Nom jeu de données" value = ''>
+
+      <!-- 2) un bouton de validation de l'envoie -->
+      <button id="but_val" disabled=true>OK</button>
+    </div>
+
+    <div id="msgErreur">
+      <p id="msg">Veuillez saisir un nom de jeu.</p>
+    </div>
+
+    <!-- V : Définition d'un pied de page contenant le lien vers la page de jeu -->
+    <div id="PdP">
+      <a href="https://girardinclaire.alwaysdata.net/jeu">Pour jouer au jeu du taquin, cliquez ici</a>
+    </div>
+
+    <!-- VI : lancement des scripts JavaScript : -->
+
+      <!-- 1) script de blocage du bouton de validation si le nom saisi existe déjà dans la base de données -->
+      <script src="js/check_unicity.js"></script>
+
+      <!-- 2) script principal gérant le site, de la navigation jusqu'à l'envoie des données dans la base de données -->
+      <script src="js/main_js.js"></script>
+
+      <!-- 3) script gérant le bouton d'aide -->
+      <script src="js/aide.js"></script>
+
+  </body>
+</html>
+
+

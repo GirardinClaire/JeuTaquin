@@ -1,0 +1,199 @@
+/* Réalisé à partir du travail d'Ilona Baran */
+
+
+body {
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-rows: 4vh 90vh 4vh;
+}
+
+#contener1 {
+    grid-row : 1;
+    position: absolute;
+    box-shadow: 0vh 1vh 1.5vh rgba(0,0,0,.3);
+    text-align: center;
+    background-color: #ffffff;
+    width: 100vw;
+    max-height: 10vh;
+}
+
+#contener2 {
+    grid-row : 2;
+    display: grid;
+    grid-template-columns: 1fr 10fr 20fr 8fr 1fr;
+    grid-template-rows: 12.5% 10% 5% 5% 60% 7.5%;
+    background-color:  #a7c5f1;
+}
+
+footer {
+    grid-row : 3;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+
+/* ------------------------- En-tête de la page -------------------------- */
+
+#titre {
+    font-family: calibri;
+    font-size: 1.7em;
+}
+
+
+/* ------------------------- Présentation & HoF (gauche page) -------------------------- */
+#contexte{
+    grid-column: 2;  
+    grid-row: 2;   
+    font-size: 93%;  
+    text-align: justify;
+    padding-left: 4%;
+    padding-right: 4%;
+    overflow: auto;
+    height: 20vh;
+}
+
+table {
+    border-collapse: separate;
+    text-align: center;
+    border-spacing: 2px 10px;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 5%;
+}
+  
+tr:first-child {
+padding-left: 10px;
+}
+
+tr:last-child {
+padding-right: 10px;
+}
+ 
+tr {
+    background:  rgba(255, 255, 255, 0.724);
+}
+
+
+#score{
+    grid-column: 2;      
+    grid-row: 5 / span 2;
+    
+    padding-left: 2%;
+    padding-right: 2%;
+
+    height: 50vh;
+    overflow: auto;
+    margin-top: 10%;
+    font-size: 65%;
+}
+
+a {
+    font-size: 86%;
+    text-decoration: none;
+    color: #1e60bd;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+
+.titreScore{
+    grid-column: 2;      
+    grid-row: 2;
+    width: 90%;
+
+    margin-left: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+    color: #1e60bd;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', sans-serif;
+    font-size: 2.5em;
+}
+
+
+/* ------------------------ Affichache carte (centre page) ------------------------ */
+
+#fondMap{
+    grid-column: 3;  
+    grid-row: 2 / span 4;
+}
+
+#conteneur {
+    padding-bottom: 2%;
+    padding-left: 20%;
+    padding-right: 10%;
+    padding-left: auto;
+    padding-right: auto;
+    padding-top: 2%;
+
+    margin-left: auto;   
+    margin-right: auto;
+
+    display : grid;
+    grid-template-columns:15vmin 15vmin 15vmin 15vmin;
+    grid-template-rows: 15vmin 15vmin 15vmin 15vmin;
+}
+  
+#conteneur img{
+    height: 14.4vmin;
+    width: 14.4vmin;
+    padding: 0.4vmin;
+    background-color: white;
+}
+
+
+
+/* ------------------------  Progression (droite de la page) ------------------------ */
+
+#progression{
+    grid-column: 4;  
+    grid-row: 2 / span 4;  
+
+    margin-right: 5%;
+    
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+#form{
+    margin-left: -3%;
+    width: 80%;
+}
+
+#timer{
+    text-align: center;
+}
+
+
+.contour{
+    background-color: rgba(255, 255, 255, 0.724);
+    border: 1px solid rgb(17, 8, 31);
+    font-family: calibri;
+    border-radius: 1.5vh;
+}
+
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.item{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
