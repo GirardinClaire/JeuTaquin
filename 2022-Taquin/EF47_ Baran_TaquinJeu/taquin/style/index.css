@@ -1,0 +1,207 @@
+/* Réalisé par Ilona Baran */
+
+
+body {
+    display: grid;
+    grid-template-rows: 5% 85% 5%;
+}
+
+#contener1 {
+    grid-row : 1;
+    text-align: center;
+    font-family: Cambria, serif;
+    background-color: #f4ffec;
+    max-height: 5vh;
+}
+
+#contener2 {
+    grid-row : 2;
+    max-height: 85vh;
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: 5% 30% 45% 15% 5%;
+    grid-template-rows: 10% 10% 5% 10% 60% 5%;
+    background-color: #87a886;
+}
+
+footer {
+    grid-row : 3;
+    text-align: center;
+    background-color: #f4ffec;
+}
+
+/* -------------------------------------------------------------------- */
+
+#fondMap{
+    grid-column: 3;  
+    grid-row: 2 / span 4;   
+    /* max-height: 80%;      */
+    /* padding: 5%; */
+    
+    /* background-color: rgba(187, 6, 6, 0.8); */
+
+    /* display: grid;
+    grid-template-columns: 5% 90% 5%;  */
+}
+
+#conteneur{
+    padding-bottom: 2%; 
+    padding-left: 20%;
+    padding-right: 10%;
+    padding-left: auto;
+    padding-right: auto;
+    padding-top: 2%;
+
+    margin-left: auto;   
+    margin-right: auto;
+    
+    display: grid;
+    grid-template-columns: repeat(4, 20%);
+}
+
+#progression{
+    grid-column: 4;  
+    grid-row: 2 / span 4;   
+
+    background-color: rgba(145, 175, 144, 0.8);
+
+
+    display: grid;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+#connexion{
+    grid-row: 1;
+    
+    padding-left: 5%;
+    padding-top: 1%;
+
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#btnAleatoire{
+    grid-row: 2;  
+    /* margin-left: 20%; 
+    margin-right: 20%; 
+    margin-top: 20%;
+    margin-bottom: 20% */
+    margin: 20%;
+}
+
+#nbCoups{
+    grid-row: 3;  
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+#nbBienPlace{
+    grid-row: 4; 
+    margin-left: auto; 
+    margin-right: auto;  
+}
+
+#finJeu{
+    grid-row: 5;  
+    margin-left: auto; 
+    margin-right: auto; 
+
+}
+
+
+
+
+#contexte{
+    grid-column: 2;  
+    grid-row: 2;     
+
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    overflow: auto;
+    scrollbar-width: thin;
+    height: 20vh;
+    scrollbar-color: rgba(121, 159, 168, 0.5) rgba(13, 16, 32, 0.5);
+
+    border: 1px solid rgb(17, 8, 31);
+    border-radius: 5%;
+}
+
+#score{
+    grid-column: 2;      
+    grid-row: 5 / span 2;               
+
+    overflow: auto;
+    scrollbar-width: thin;
+    height: 50vh;
+    overflow-y: scroll;
+    scrollbar-color: rgba(121, 159, 168, 0.5) rgba(13, 16, 32, 0.5);
+    margin-top: 10%;
+    font-size: 65%;
+}
+
+table {
+    border-collapse: separate; 
+    width: 100%;
+    text-align: center;
+    border-spacing : 5%;
+    border-spacing: 0px 10px;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 5%;
+}
+    
+tr {
+    background:  rgba(175, 175, 185, 0.8);
+}
+
+.contour{
+    background-color: rgba(251, 250, 251, 0.466);
+    border: 1px solid rgb(17, 8, 31);
+    border-radius: 5%;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(22, 101, 204);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.titre {
+    font-size: 1.2em;
+    font-weight: 600;
+    background-color: #f4ffec;
+    /* margin: 1.5% 0%; */
+}
+
+.titreScore{
+    grid-column: 2;      
+    grid-row: 2;
+    width: 90%;
+
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 5%; 
+
+    color: #f4ffec;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', sans-serif;
+    font-size: 2.5em;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.item{
+    /* width: auto;
+    height: auto; */
+    max-width: 100%;
+    max-height: 100%;
+}
