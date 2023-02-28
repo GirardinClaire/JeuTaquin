@@ -2,7 +2,8 @@
 
 
 Vous trouverez dans ce dépôt les codes associés aux différentes pages de jeu listées ci-dessous ainsi que les documents (rapport, document d'utilisation, document d'installation et document programmeur) demandés pour ce projet Web Mapping dans le cursus d'ingénieur 2 ème année de l'ENSG Géomatique.
-\nVous trouverez également les rendus de ce projet datant de l'année dernière (2022-taquin), contenant les documents et les codes, ainsi que le sujet et les consignes de cette année.
+
+Vous trouverez également les rendus de ce projet datant de l'année dernière (2022-taquin), contenant les documents et les codes, ainsi que le sujet et les consignes de cette année.
 
 
 Voici les pages liées à ces codes :
