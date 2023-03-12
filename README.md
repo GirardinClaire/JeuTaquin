@@ -1,10 +1,10 @@
 # Jeu du Taquin par GIRARDIN Claire
 
 
-Vous trouverez dans ce dépôt les codes commentés associés aux différentes pages de jeu listées ci-dessous ainsi que les documents (rapport, document d'utilisation, document d'installation et document programmeur) demandés pour ce projet Web Mapping dans le cursus d'ingénieur 2 ème année de l'ENSG Géomatique.
-
-Vous trouverez également les rendus de ce projet datant de l'année dernière (2022-taquin), contenant les documents et les codes, ainsi que le sujet et les consignes de cette année.
-
+Vous trouverez dans ce projet :
+- les codes commentés associés aux différentes pages de jeu listées ci-dessous ainsi que les documents (rapport, document d'utilisation, document d'installation et document programmeur) demandés pour ce projet Web Mapping dans le cursus d'ingénieur 2 ème année de l'ENSG Géomatique.
+- le sujet et les consignes de cette année
+- les rendus de ce projet datant de l'année dernière (2022-taquin), contenant les documents et les codes
 
 
 
