@@ -43,7 +43,7 @@ var NumToPos = new Map([[1, '0_0'], [2, '0_1'], [3, '0_2'], [4, '0_3'], [5, '1_0
 
 
 // Choix du nom de jeu pour le Hall Of Fame
-fetch('../jeu/php/choixHoF.php')
+fetch('../jeuDD/php/choixHoF.php')
 .then(response => response.json())
 .then(result => {
   nomJeu.innerHTML = "";
@@ -65,7 +65,7 @@ function validationformulaire1(event) {
 afficheHoF('Tous');
 
 function afficheHoF(nameJeu) {
-  fetch('../jeu/php/classement.php?nomJeu='+nameJeu)
+  fetch('../jeuDD/php/classement.php?nomJeu='+nameJeu)
   .then(result => result.json())
   .then(result => {
     var listHallOfFame = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 'p10'];
@@ -98,7 +98,7 @@ function afficheHoF(nameJeu) {
 
 
 // Proposition de sélection de différents jeux : les 5 derniers crées et 5 autres tirés aléatoirement
-fetch('../jeu/php/name.php')
+fetch('../jeuDD/php/name.php')
 .then(response => response.json())
 .then(result => {
   idJeu.innerHTML = "";
@@ -166,7 +166,7 @@ function validationformulaire2(event) {
 
 // Fonction permettant de récupérer tous les attributs d'un jeu
 function recupJeu(idJeu) {
-  fetch('../jeu/php/jeu.php?idJeu='+idJeu.value)
+  fetch('../jeuDD/php/jeu.php?idJeu='+idJeu.value)
   .then(result => result.json())
   .then(imagettes => {
     affichageImagettes(imagettes);
@@ -202,7 +202,7 @@ function affichageImagettes(imagettes) {
         tabImage.set(bulleImage, liste[index]);
       }
       else {
-        img.src = "../jeu/img/CarreBlanc.jpg";
+        img.src = "../jeuDD/img/CarreBlanc.jpg";
         tabImage.set(bulleImage, "special");
       }
       bulleImage.appendChild(img);
@@ -395,7 +395,7 @@ function checkScore(tabImage, items) {
     div_special.innerHTML = '<img src=' + myBD[0]["img_3_3"] + '>';
     tabImage.set(div_special, 16);
     // Enregistrer toutes les infos et afficher le msg de fin
-    fetch('../jeu/php/save.php?idJeu='+idJeu.value+'&pseudo='+pseudo.value+'&nbCoups='+nombre_de_coup+'&temps='+chrono.textContent);
+    fetch('../jeuDD/php/save.php?idJeu='+idJeu.value+'&pseudo='+pseudo.value+'&nbCoups='+nombre_de_coup+'&temps='+chrono.textContent);
     setTimeout(function() {
       alert('Bravo vous avez gagné ! On continue à jouer ?')
       window.location.href = 'index.php';
@@ -448,7 +448,7 @@ function possibleMove(item, tabImage) {
   */
 
   if (Movable(item, tabImage) == 1) { // cas où la case cliquée et la case vide sont sur la même ligne
-    var diffX = Math.floor(Math.abs(x_special-x) / long) // écart sur la ligne entre les cases
+    var diffX = Math.floor(Math.abs(x_special-x) / long) + 1 // écart sur la ligne entre les cases
     if (x < x_special) { // case cliquée à gauche de la case blanche
       MoveXgauche(diffX, item);
     }
@@ -458,7 +458,7 @@ function possibleMove(item, tabImage) {
   }
 
   if (Movable(item, tabImage) == 2) { // cas où la case cliquée et la case vide sont sur la même colonne
-    var diffY = Math.floor(Math.abs(y_special-y) / long) // écart sur la colonne entre les cases
+    var diffY = Math.floor(Math.abs(y_special-y) / long) + 1// écart sur la colonne entre les cases
     if (y < y_special) { // case cliquée au dessus de la case blanche
       MoveYhaut(diffY, item);
     }
@@ -478,7 +478,7 @@ function MoveXgauche(diff, item) {
     item2.innerHTML = '<img src=' + myBD[0]["img_" + NumToPos.get(img1)] + '>' ;
     tabImage.set(item2,img1);
   }
-  item.innerHTML = '<img src=../jeu/img/CarreBlanc.jpg>';
+  item.innerHTML = '<img src=../jeuDD/img/CarreBlanc.jpg>';
   tabImage.set(item,"special");
 }
 
@@ -492,7 +492,7 @@ function MoveXdroite(diff, item) {
     item2.innerHTML = '<img src=' + myBD[0]["img_" + NumToPos.get(img1)] + '>' ;
     tabImage.set(item2,img1);
   }
-  item.innerHTML = '<img src=../jeu/img/CarreBlanc.jpg>';
+  item.innerHTML = '<img src=../jeuDD/img/CarreBlanc.jpg>';
   tabImage.set(item,"special");
 }
 
@@ -506,7 +506,7 @@ function MoveYhaut(diff, item) {
     item2.innerHTML = '<img src=' + myBD[0]["img_" + NumToPos.get(img1)] + '>' ;
     tabImage.set(item2,img1);
   }
-  item.innerHTML = '<img src=../jeu/img/CarreBlanc.jpg>';
+  item.innerHTML = '<img src=../jeuDD/img/CarreBlanc.jpg>';
   tabImage.set(item,"special");
 }
 
@@ -520,7 +520,7 @@ function MoveYbas(diff, item) {
     item2.innerHTML = '<img src=' + myBD[0]["img_" + NumToPos.get(img1)] + '>' ;
     tabImage.set(item2,img1);
   }
-  item.innerHTML = '<img src=../jeu/img/CarreBlanc.jpg>';
+  item.innerHTML = '<img src=../jeuDD/img/CarreBlanc.jpg>';
   tabImage.set(item,"special");
 }
 
