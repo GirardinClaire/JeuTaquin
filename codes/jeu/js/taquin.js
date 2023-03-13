@@ -25,6 +25,9 @@ var tuile_bien_place;
 var nombre_de_coup = 0;
 var items;
 var t; // permet d'initialiser le chrono à chaque nouvelle partie
+var img1;
+var item1;
+var item2;
 
 // [div, numImage]
 var tabImage = new Map();
@@ -461,7 +464,7 @@ function possibleMove(item, tabImage) {
   */
 
   if (Movable(item, tabImage) == 1) { // cas où la case cliquée et la case vide sont sur la même ligne
-    var diffX = Math.floor(Math.abs(x_special-x) / long) // écart sur la ligne entre les cases
+    var diffX = Math.floor(Math.abs(x_special-x) / long) + 1 // écart sur la ligne entre les cases
     if (x < x_special) { // case cliquée à gauche de la case blanche
       MoveXgauche(diffX, item);
     }
@@ -471,7 +474,7 @@ function possibleMove(item, tabImage) {
   }
 
   if (Movable(item, tabImage) == 2) { // cas où la case cliquée et la case vide sont sur la même colonne
-    var diffY = Math.floor(Math.abs(y_special-y) / long) // écart sur la colonne entre les cases
+    var diffY = Math.floor(Math.abs(y_special-y) / long) + 1 // écart sur la colonne entre les cases
     if (y < y_special) { // case cliquée au dessus de la case blanche
       MoveYhaut(diffY, item);
     }
