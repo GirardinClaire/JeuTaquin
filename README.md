@@ -15,16 +15,16 @@ Vous trouverez dans ce répertoire :
 Voici les pages liées à ces codes :
 
 - Page de jeu
-https://girardinclaire.alwaysdata.net/jeu/
+https://girardinclaire.alwaysdata.net/Taquin/jeu/
 
 - Page de création de jeu d'imagettes
-https://girardinclaire.alwaysdata.net/creation/
+https://girardinclaire.alwaysdata.net/Taquin/creation/
 
 - Début de test pour un Drag&Drop fait main
-https://girardinclaire.alwaysdata.net/testDD/
+https://girardinclaire.alwaysdata.net/Taquin/testDD/
 
 - Page de jeu pour un déplacement par glissement (et non pas par click, qui est le fonctionnement par défaut)
-https://girardinclaire.alwaysdata.net/jeuGLISS/
+https://girardinclaire.alwaysdata.net/Taquin/jeuGLISS/
 
 - Page de jeu pour un déplacement par drag&drop fait main : mais non achevé ...
-https://girardinclaire.alwaysdata.net/jeuDD/
+https://girardinclaire.alwaysdata.net/Taquin/jeuDD/
